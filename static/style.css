@@ -1,0 +1,262 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container and Layout */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Form Styling */
+.add-expense-form h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+/* Summary Layout */
+.summary-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.total-card {
+    flex: 1;
+    text-align: center;
+    background-color: #e9f7ef; /* Light green background */
+    border: 1px solid var(--secondary-color);
+}
+
+.total-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+.total-card p {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000;
+}
+
+.summary-breakdown {
+    flex: 2;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.expense-list table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* --- Flash Messages --- */
+.flash {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* --- Header & Logout Button --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- Delete Button --- */
+.btn.delete-btn {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.btn.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* --- NEW STYLES for Centered Login Header --- */
+
+.auth-body {
+    /* Change from center/center to flex-start and align content */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers vertically */
+    min-height: 100vh;
+    background-color: var(--card-bg);
+}
+
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally within the wrapper */
+    width: 90%;
+    max-width: 450px; /* Control the overall max width of the area */
+    padding: 20px;
+}
+
+.top-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.top-header h1 {
+    font-size: 3em; /* Make it large and prominent */
+    color: var(--primary-color);
+}
+
+.flash-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    margin: 0 auto 15px auto; /* Center the flash messages */
+}
+
+.auth-card {
+    /* Ensure the card is centered when not stretching to full height */
+    width: 100%;
+    max-width: 400px; /* The card itself uses 100% of the wrapper's width (max 450px) */
+    padding: 35px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin: 0; /* Remove previous margins to let wrapper handle spacing */
+}
+
+.auth-card h2 { /* Style for the new H2 inside the card */
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-size: 1.5em;
+}
