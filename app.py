@@ -200,4 +200,5 @@ if __name__ == '__main__':
     load_users_data()
     load_expenses_data()
     # Note: Flask's debug mode can cause issues with session management in some environments.
-    app.run(debug=True)
+
+    #app.run(debug=True)
