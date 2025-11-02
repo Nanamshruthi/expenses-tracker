@@ -76,22 +76,30 @@ Track Expenses: Use the "Add New Expense" form on the dashboard to input details
 
 Review: Your expenses will be immediately reflected in the "Recent Expenses" list and the "Category Breakdown" summary.
 
-📁 Project Structure
+## 🗂️ Project Folder Structure
 
+```text
 expense_tracker/
-|-- app.py               # Main Flask application and logic
-|-- expenses.csv         # Stores expense data (includes user_id)
-|-- users.csv            # Stores user authentication details (hashed passwords)
-|-- templates/
-|   |-- index.html       # Main user dashboard
-|   |-- login.html       # Login form
-|   |-- register.html    # Registration form
-|-- static/
-|   |-- style.css        # Responsive styling and design
-|-- README.md            # This file
-|-- requirements.txt     # Python dependencies for deployment
-|-- Procfile             # Web server config for Heroku (deployment)
-
+│
+├── app.py                # Main Flask application
+├── requirements.txt      # Python dependencies
+├── Procfile              # For deployment platforms (like Heroku/Render)
+├── .gitignore
+├── expenses.csv          # Stores expense data
+├── users.csv             # Stores user authentication details
+│
+├── templates/            # Jinja2 HTML templates
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│
+├── static/               # Static files (CSS, JS, images)
+│   ├── style.css
+│   ├── favicon.png
+│   └── ... (other assets)
+│
+└── README.md             # Project documentation
+```
 
 ⚠️ Data Persistence and Deployment Warning
 
